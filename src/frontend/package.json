@@ -7,7 +7,7 @@
     "dev": "set BROWSERSLIST_IGNORE_OLD_DATA=1&& vite",
     "build:skip-bindings": "set BROWSERSLIST_IGNORE_OLD_DATA=1&& vite build && pnpm copy:env",
     "build": "set BROWSERSLIST_IGNORE_OLD_DATA=1&& vite build && pnpm copy:env",
-    "copy:env": "cp env.json dist/",
+    "copy:env": "copy env.json dist\\",
     "typecheck": "tsc --noEmit --pretty",
     "check": "biome check src",
     "fix": "biome check --write src",

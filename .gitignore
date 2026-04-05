@@ -1,6 +1,5 @@
 .vscode/
 .idea/
-dist/
 build/
 .env
 node_modules/
