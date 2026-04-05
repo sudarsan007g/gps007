@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Bricolage Grotesque (Display) ── */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Outfit (Body) ── */
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── JetBrains Mono (Stealth Panel) ── */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono-Variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* ── Core Palette: Deep Navy + Teal + Warm White ── */
+    --background:  0.97 0.005 240;
+    --foreground:  0.13 0.025 260;
+
+    --card:        1 0 0;
+    --card-foreground: 0.13 0.025 260;
+
+    --popover:     1 0 0;
+    --popover-foreground: 0.13 0.025 260;
+
+    /* Primary: Deep Navy */
+    --primary:     0.22 0.065 265;
+    --primary-foreground: 0.98 0.005 240;
+
+    /* Secondary: Light Slate */
+    --secondary:   0.93 0.012 240;
+    --secondary-foreground: 0.22 0.065 265;
+
+    /* Muted */
+    --muted:       0.94 0.01 240;
+    --muted-foreground: 0.52 0.025 250;
+
+    /* Accent: Teal */
+    --accent:      0.88 0.075 195;
+    --accent-foreground: 0.15 0.05 210;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Success: Emerald */
+    --success:     0.62 0.17 155;
+    --success-foreground: 0.98 0 0;
+
+    /* Warning */
+    --warning:     0.78 0.15 75;
+    --warning-foreground: 0.15 0 0;
+
+    --border:      0.88 0.018 245;
+    --input:       0.90 0.018 245;
+    --ring:        0.50 0.12 265;
+
+    /* Success dark */
+    --success: 0.62 0.17 155;
+    --success-foreground: 0.98 0 0;
+
+    /* Warning dark */
+    --warning: 0.78 0.15 75;
+    --warning-foreground: 0.15 0 0;
+
+    /* Charts */
+    --chart-1: 0.55 0.18 265;
+    --chart-2: 0.55 0.15 195;
+    --chart-3: 0.62 0.17 155;
+    --chart-4: 0.78 0.15 75;
+    --chart-5: 0.577 0.245 27.325;
+
+    /* Sidebar */
+    --sidebar: 0.20 0.055 265;
+    --sidebar-foreground: 0.96 0.008 240;
+    --sidebar-primary: 0.55 0.18 195;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.28 0.06 265;
+    --sidebar-accent-foreground: 0.96 0 0;
+    --sidebar-border: 0.28 0.04 265;
+    --sidebar-ring: 0.55 0.15 195;
+
+    /* Auth specific */
+    --auth-gradient-from: 0.18 0.055 265;
+    --auth-gradient-via: 0.22 0.08 230;
+    --auth-gradient-to: 0.15 0.04 280;
+  }
+
+  .dark {
+    --background: 0.13 0.025 260;
+    --foreground: 0.96 0.008 240;
+
+    --card: 0.18 0.04 260;
+    --card-foreground: 0.96 0.008 240;
+
+    --popover: 0.20 0.045 260;
+    --popover-foreground: 0.96 0.008 240;
+
+    --primary: 0.60 0.18 195;
+    --primary-foreground: 0.13 0.025 260;
+
+    --secondary: 0.24 0.055 260;
+    --secondary-foreground: 0.96 0.008 240;
+
+    --muted: 0.22 0.04 260;
+    --muted-foreground: 0.65 0.02 250;
+
+    --accent: 0.55 0.18 195;
+    --accent-foreground: 0.13 0.025 260;
+
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.28 0.04 260;
+    --input: 0.26 0.04 260;
+    --ring: 0.55 0.18 195;
+
+    /* Success dark mode */
+    --success: 0.70 0.18 155;
+    --success-foreground: 0.10 0.02 260;
+
+    /* Warning dark mode */
+    --warning: 0.82 0.17 75;
+    --warning-foreground: 0.12 0.02 80;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-success {
+    color: oklch(var(--success));
+  }
+  .bg-success {
+    background-color: oklch(var(--success));
+  }
+  .text-success-foreground {
+    color: oklch(var(--success-foreground));
+  }
+  .border-success {
+    border-color: oklch(var(--success));
+  }
+  .bg-success\/10 {
+    background-color: oklch(var(--success) / 0.1);
+  }
+  .bg-success\/15 {
+    background-color: oklch(var(--success) / 0.15);
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "secureauth": {
+      "users": {
+        "$uid": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid",
+          "id": { ".validate": "newData.isString() && newData.val() === $uid" },
+          "fullName": { ".validate": "newData.isString() && newData.val().length >= 2" },
+          "mobile": { ".validate": "newData.isString() && newData.val().matches(/^\\d{10}$/)" },
+          "email": { ".validate": "newData.isString() && newData.val().matches(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/)" },
+          "passwordHash": { ".validate": "newData.isString()" },
+          "isVerified": { ".validate": "newData.isBoolean()" },
+          "createdAt": { ".validate": "newData.isString()" },
+          "$other": { ".validate": false }
+        }
+      },
+      "mobileIndex": {
+        "$mobile": {
+          ".read": true,
+          ".write": "auth != null && newData.isString() && newData.val() === auth.uid && root.child('secureauth/users/' + auth.uid + '/mobile').val() === $mobile",
+          ".validate": "newData.isString() && newData.val() === auth.uid"
+        }
+      },
+      "sessions": {
+        "$uid": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid",
+          "userId": { ".validate": "newData.isString() && newData.val() === $uid" },
+          "loginTime": { ".validate": "newData.isString()" },
+          "$other": { ".validate": false }
+        }
+      },
+      "commandHistory": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      },
+      "locationHistory": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+}
