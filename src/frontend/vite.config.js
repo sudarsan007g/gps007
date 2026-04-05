@@ -13,6 +13,7 @@ process.env.STORAGE_GATEWAY_URL =
   process.env.STORAGE_GATEWAY_URL || "https://blob.secureauth.app";
 
 export default defineConfig({
+  base: process.env.NODE_ENV === "production" ? "/gps007/" : "/",
   logLevel: "error",
   build: {
     emptyOutDir: true,
