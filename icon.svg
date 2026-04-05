@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>SecureAuth Icon</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#bg)" />
+  <path d="M256 104c-70.7 0-128 57.3-128 128v58c0 87.3 57.3 144.4 128 171.5 70.7-27.1 128-84.2 128-171.5v-58c0-70.7-57.3-128-128-128zm0 64c35.3 0 64 28.7 64 64v18H192v-18c0-35.3 28.7-64 64-64z" fill="#38bdf8" />
+  <rect x="176" y="236" width="160" height="144" rx="20" fill="#e2e8f0" />
+  <circle cx="256" cy="292" r="18" fill="#0f172a" />
+  <rect x="246" y="304" width="20" height="40" rx="8" fill="#0f172a" />
+</svg>

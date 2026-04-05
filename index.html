@@ -3,10 +3,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="/gps007/apple-touch-icon.png" />
+    <link rel="manifest" href="/gps007/manifest.json" />
     <script type="module" crossorigin src="/gps007/assets/index-CPFZI2-L.js"></script>
     <link rel="stylesheet" crossorigin href="/gps007/assets/index-CN4A9nOU.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/gps007/sw.js");
+        });
+      }
+    </script>
   </body>
 </html>
