@@ -1,4 +1,4 @@
-# 🛰️ GPS007 – Stealthy Embedded Laptop Tracking & Anti-Theft System
+# 🛰️ GPS007(SecureAuth) – Stealthy Embedded Laptop Tracking & Anti-Theft System
 
 <p align="center">
 
@@ -12,7 +12,7 @@ GPS • GSM • IoT • Cloud • Mobile Application
 
 ## 🚀 Live Demo
 
-🌐 **Live Project:** https://sudarsan007g.github.io/gps007/
+🌐 **Live Project:** https://sudarsan007g.github.io/gps007/ (SecureAuth)
 
 🎨 **Portfolio:** https://sudarsan-portfolio-blond.vercel.app/
 
@@ -20,7 +20,7 @@ GPS • GSM • IoT • Cloud • Mobile Application
 
 ## 📖 About GPS007
 
-**GPS007** is a stealthy embedded laptop tracking and anti-theft system developed as my Final Year Engineering Project.
+**GPS007** (SecureAuth) is a stealthy embedded laptop tracking and anti-theft system developed as my Final Year Engineering Project.
 
 Unlike traditional software-based tracking solutions, GPS007 is a dedicated embedded hardware module installed inside the laptop chassis. It operates independently using its own rechargeable battery, allowing continuous location tracking even when the laptop is powered off, reformatted, or the operating system is changed.
 
@@ -80,7 +80,7 @@ The project combines Embedded Systems, IoT, Cloud Computing, GPS, GSM communicat
 
 ## 📱 Mobile Application
 
-The GPS007 mobile application allows users to
+The GPS007(SecureAuth) mobile application allows users to
 
 * Live Location Tracking
 * Device Status Monitoring
@@ -148,7 +148,7 @@ B.Tech – Artificial Intelligence & Data Science
 
 Embedded Systems • IoT • AI • Product Development
 
-🌐 Live Demo: https://sudarsan007g.github.io/gps007/
+🌐 Live Demo: https://sudarsan007g.github.io/gps007/ (SecureAuth)
 
 🎨 Portfolio: https://sudarsan-portfolio-blond.vercel.app/
 
